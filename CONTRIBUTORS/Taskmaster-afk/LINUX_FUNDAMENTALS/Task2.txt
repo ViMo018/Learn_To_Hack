@@ -1,0 +1,26 @@
+mkdir #
+Creates a new directory 
+
+cd  
+#Changes the currrent working directory
+
+touch 
+#Creates an empty text file
+
+mv 
+#used to rename the file
+
+cd .. 
+#Moves back to the parent directory
+
+rm 
+#deletes the directory along with its contents
+
+sudo adduser 
+#Creates a new user account
+
+groups 
+#displays the groups to which a user beongs
+
+sudo uermod -aG sudo 
+#is used to add the new user to the sudo group which grants the user administrator priviliges
