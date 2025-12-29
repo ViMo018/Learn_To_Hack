@@ -1,0 +1,16 @@
+Output:           geek{grep_is_good_to_find_things_cEDf1591}
+
+Command used:     grep -a "geek{" file
+
+In WSL inside windows terminal.
+
+The above command was used to find the flag. 
+"geek{" this finded the text that starts with geek{ , and highlighted it in red.
+-a --> it treated the file in which the flag was hidden as text
+
+
+grep : used to search for plane text data that matches `geek{}`.
+
+Scrnsht links:
+1. - https://drive.google.com/file/d/1d1F7TGm8vg5MVF-EIzjJEHKB2va_dgZF/view?usp=sharing
+2. - https://drive.google.com/file/d/1sSncvbEntdyDsbg5BmTQiy2tIijBE2AM/view?usp=sharing
