@@ -1,0 +1,19 @@
+strings simply scans a file and prints any sequence of printable characters longer than a certain length
+
+Default = 4 characters
+
+Usage
+
+strings file
+
+ex 
+  strings challenge.bin
+
+
+CTF USE CASE
+
+1. Finding flags instantly
+2. Finding hidden URLs or IPs
+3. Finding credentials
+4. Detecting file type lies
+5. Recon before reversing
