@@ -1,0 +1,52 @@
+Description
+kill is a command-line utility used to send signals to running processes in Unix/Linux systems. It is most commonly used to stop or terminate processes by their Process ID (PID), but it can also send other signals for controlling process behavior.
+
+Basic Syntax
+kill PID
+
+Useful Features & Flags
+
+1. kill PID 
+Sends the SIGTERM signal, which politely asks a process to terminate.
+This allows the process to clean up resources before exiting.
+
+Example:
+kill 1234
+
+2. Force Kill -9
+Immediately terminates a process without allowing cleanup.
+Use this only when a process does not respond to SIGTERM.
+
+Example:
+kill -9 1234
+
+3. -l
+Displays all available signal names and their corresponding numbers.
+
+Example:
+kill -l
+
+4. -SIGSTOP 
+Stops a process without terminating it.
+The process can be resumed later.
+
+Example:
+kill -SIGSTOP 1234
+
+5. -SIGCONT
+Resumes a process that was previously stopped using SIGSTOP.
+
+Example:
+kill -SIGCONT 1234
+
+6. -SIGKILL
+Same as -9, but more readable and explicit.
+
+Example:
+kill -SIGKILL 1234
+
+7. Killing Multiple Processes
+You can send a signal to multiple PIDs at once.
+
+Example:
+kill 1234 5678 9012
