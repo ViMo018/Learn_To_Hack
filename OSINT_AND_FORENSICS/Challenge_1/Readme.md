@@ -11,7 +11,7 @@ Attach the screenshot's drive link.
 Submission folder:
 ```
 CONTRIBUTORS/
-└── Your_Name/
+└── Your_folder/
     └── OSINT_AND_FORENSICS/
         └── Challenge_1.txt
 ```
