@@ -1,0 +1,37 @@
+==============================
+TASK 2: LINUX FUNDAMENTALS
+==============================
+
+------------------------------
+PART 1: Directory & File Manipulation
+------------------------------
+
+mkdir task2_dir
+
+cd task2_dir
+
+
+touch Aaryan.txt
+
+
+mv Aaryan.txt IIB2024023.txt
+
+cd ..
+
+rm -r task2_dir
+
+------------------------------
+PART 2: User Management
+------------------------------
+
+sudo useradd testuser
+
+
+groups testuser
+
+sudo usermod -aG wheel testuser
+
+groups testuser
+
+sudo passwd testuser
+

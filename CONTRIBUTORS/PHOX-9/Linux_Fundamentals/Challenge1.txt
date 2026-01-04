@@ -1,0 +1,13 @@
+Flag:
+geek{grep_is_good_to_find_things_cEDf1591}
+
+Command:
+grep -o "geek{[^}]*}" file
+
+Explanation:
+grep is used to search for searching so the flag can be found using it. The flag is of the form "geek{..}" so we have to take all the characters 
+between the curly braces. ^ denotes negation and placing it before } denotes that taking all characters until a '}' is encountered.
+So running this command gives us the flag.
+
+Proof:
+https://drive.google.com/file/d/1oYzAROPHoXqUiefOtCm_PA5CF2iffZ9v/view?usp=sharing

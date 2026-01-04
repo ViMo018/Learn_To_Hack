@@ -1,0 +1,15 @@
+Command Name: which
+
+Description: which searches the user's PATH for executable files and shows their location. Essential for finding custom tools, verifying PATH integrity, and CTF enumeration.
+
+Examples:
+which ls
+which cat
+which python
+
+Some Important Flags:
+       -a     print all matching executables in PATH (not just first found)
+       --skip-dot  skip current directory (.) in PATH search
+       --skip-functions  ignore shell functions with same name
+       --show-dot  print ./ if executable found in current directory
+       --show-tilde  print ~USER if executable in user home

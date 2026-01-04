@@ -1,0 +1,4 @@
+Flag: geek{EveryOne_Loves_Maggi}
+I used ExifTool to read metadata and i found this flag.
+Screenshot link:
+https://drive.google.com/file/d/10e4C40pwAYXeFNjAey9O1r8FbZ-j5jBn/view?usp=sharing

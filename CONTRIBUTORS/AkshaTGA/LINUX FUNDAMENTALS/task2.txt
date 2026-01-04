@@ -1,0 +1,46 @@
+PART 1: Directory & File Manipulation
+
+mkdir Opencode
+Creates a new directory named Opencode.
+
+
+cd Opencode
+Moves into the newly created directory Opencode.
+
+
+touch Akshat.txt
+Creates an empty file named Akshat.txt.
+
+mv Akshat.txt IIT2024077.txt
+Renames the file from Akshat.txt to IIT2024077.txt.
+
+cd ..
+Moves back to the parent directory.
+
+
+rm -r Opencode
+Deletes the directory Opencode along with its contents.
+
+
+Part 2: User Management
+
+sudo adduser rick
+Creates a new user account named rick.
+
+groups rick
+Displays the groups to which the user rick belongs.
+
+sudo usermod -aG sudo rick
+Adds the user rick to the sudo group.
+
+
+su rick
+Switches the current user to rick.
+
+whoami
+Displays the current user.
+
+
+
+
+Link: https://drive.google.com/drive/folders/1r7r53rmAtAb0aYpgyanvRL7sZegIo6R6?usp=sharing

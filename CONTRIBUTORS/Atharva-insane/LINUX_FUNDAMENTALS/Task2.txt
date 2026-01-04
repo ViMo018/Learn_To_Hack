@@ -1,0 +1,18 @@
+ 1. mkdir
+creates a new directory
+2. touch
+creates a new file within a directory
+3. mv 
+used to rename a fiel
+4. rm -r
+used to delete a directory with contents
+4. sudo adduser <new_username>
+creates a new user
+5. su- 
+used to change from one user to another
+6. groups <username> 
+used to obtain the groups in which the user is part of 
+7. sudo usermod -aG sudo <username> 
+used to assign the sudo group to any user, will be assigned by the user which already has administrative privelages
+8. passwd 
+used ot assign a new password to a user

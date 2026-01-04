@@ -1,0 +1,39 @@
+COMMAND: objdump
+
+DESCRIPTION:
+The 'objdump' command displays information about object files and binaries. It's a crucial tool for
+reverse engineering, binary analysis, and CTF challenges. It can disassemble executable code, display
+symbol tables, analyze section headers, and extract valuable information from compiled programs.
+Commonly used by security researchers, CTF players, and developers for understanding binary structure
+and machine code.
+
+USAGE:
+objdump [OPTIONS] FILE...
+
+FLAGS:
+
+1. -d, --disassemble
+   Description: Display assembler code for executable sections
+   Example: objdump -d ./binary | head -50
+   Use Case: View the actual assembly code of the program to understand its behavior (essential for CTF)
+
+2. -D, --disassemble-all
+   Description: Disassemble all sections, not just executable ones
+   Example: objdump -D ./binary > disassembly.txt
+   Use Case: Extract assembly from all sections, useful for finding hidden code or data sections
+
+3. -S, --source
+   Description: Display source code intermixed with disassembly (if debug symbols available)
+   Example: objdump -S ./binary_with_debug | grep -A 5 "main"
+   Use Case: See original C/C++ code alongside assembly for better understanding
+
+4. -t, --syms
+   Description: Print symbol table entries
+   Example: objdump -t ./binary | grep -i "flag\|secret\|check"
+   Use Case: Find interesting function names and variables (flags might be function names in CTF)
+
+5. -T, --dynamic-syms
+   Description: Print the dynamic symbol table (for dynamically linked binaries)
+   Example: objdump -T ./binary | head -20
+   Use Case: View imported functions and symbols in dynamically linked executables
+

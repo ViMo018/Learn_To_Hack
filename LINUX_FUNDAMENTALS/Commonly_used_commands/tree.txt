@@ -1,0 +1,20 @@
+Tree command:
+This command is used to display the files and folders present in a directory.
+
+For eg.
+If my directory contains three folders: 
+Folder1,Folder2,Folder3
+Then using tree would give:
+.
+├── Folder1
+├── Folder2
+└── Folder3
+
+which shows the folders present in my directory.
+
+Flags:
+-a :displays all files, including hidden files
+-L <number> :limits the depth of the directory tree
+-d :displays directories only
+-f :prints the full path of each file
+-h :displays file sizes in a human-readable format
