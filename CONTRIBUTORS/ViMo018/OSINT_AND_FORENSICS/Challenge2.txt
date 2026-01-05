@@ -1,0 +1,20 @@
+flag:-
+geek{EveryOne_Loves_Maggi}
+
+Command used
+
+exitfool
+first i used this command to install library
+ sudo apt install libimage-exiftool-perl
+
+ and then using exitfool 
+
+  exiftool CICADA_IS_COMING.png
+
+  i got the flag
+
+
+
+
+ScreenShot link:- 
+https://drive.google.com/file/d/156ElgxiRjapGU6D2toD5eKzx0-Uuyi8D/view?usp=sharing
