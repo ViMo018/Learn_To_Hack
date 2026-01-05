@@ -1,6 +1,7 @@
 #To create a new directory
 mkdir my_task
 
+
 #To go inside that directory
 cd my_task
 
@@ -8,6 +9,7 @@ cd my_task
 touch vishva.txt
 
 #rename
+
 mv vishva.txt iec2024060.txt
 
 # to move one level up the directory
