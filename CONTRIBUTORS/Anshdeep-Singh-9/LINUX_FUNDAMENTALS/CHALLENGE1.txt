@@ -1,0 +1,6 @@
+Flag: geek{grep_is_good_to_find_things_cEDf1591}
+
+Command Used: grep -oE 'geek\{[^}]*\}' file
+Explanation: -o prints only the matching string, -E allows for advanced regex, 'geek' is the string as it is, '\{' means { as it is, '[^}]*' means there could be any characters after { except }, then '}' means that the expression ends with }.
+
+Drive Link: https://drive.google.com/file/d/1wNQyC9gzkGvwizzTOREayW_VUG7z6hEV/view?usp=sharing

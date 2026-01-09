@@ -1,0 +1,151 @@
+What is Exiftool?
+Exiftool is a very famous tool which is used to read, write and manipulate the metadata of various file types such as txt, 
+png, jpeg, pdf,etc.Exif in Exiftool stands for Exchangeable Image File Format.Exiftool is Built on Perl by Phil Harvey.
+
+How to Read Meta Data?
+1. For reading entire list of metadata we use : exiftool <filename>
+Example:
+exiftool img1.jpg
+//Output:-
+ExifTool Version Number         : 13.25
+File Name                       : img1.jpg
+Directory                       : .
+File Size                       : 160 kB
+File Modification Date/Time     : 2025:11:22 19:40:51+05:30
+File Access Date/Time           : 2026:01:03 13:58:58+05:30
+File Inode Change Date/Time     : 2026:01:03 13:58:55+05:30
+File Permissions                : -rw-rw-r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Resolution Unit                 : inches
+X Resolution                    : 72
+Y Resolution                    : 72
+Image Width                     : 896
+Image Height                    : 1152
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Image Size                      : 896x1152
+Megapixels                      : 1.0
+
+2. To obtain hexadecimal tag IDs, which uniquely identify EXIF tags, we use the -H flag with exifTool.
+Example: 
+exiftool -H img1.jpg
+//Output:-
+     - ExifTool Version Number         : 13.25
+     - File Name                       : img1.jpg
+     - Directory                       : .
+     - File Size                       : 160 kB
+     - File Modification Date/Time     : 2025:11:22 19:40:51+05:30
+     - File Access Date/Time           : 2026:01:03 13:58:58+05:30
+     - File Inode Change Date/Time     : 2026:01:03 13:58:55+05:30
+     - File Permissions                : -rw-rw-r--
+     - File Type                       : JPEG
+     - File Type Extension             : jpg
+     - MIME Type                       : image/jpeg
+0x0000 JFIF Version                    : 1.01
+0x0002 Resolution Unit                 : inches
+0x0003 X Resolution                    : 72
+0x0005 Y Resolution                    : 72
+     - Image Width                     : 896
+     - Image Height                    : 1152
+     - Encoding Process                : Baseline DCT, Huffman coding
+     - Bits Per Sample                 : 8
+     - Color Components                : 3
+     - Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+     - Image Size                      : 896x1152
+     - Megapixels                      : 1.0
+We can clearly see the difference in the output when using the -H flag we also got the ids of Exif Tags like JFIF Version,
+Resolution Unit,etc.
+
+3. Also there are most common exif tags, for obtaining only these we can use --common flag.
+
+Example:
+exiftool --common img1.jpg
+//Output:-
+ExifTool Version Number         : 13.25
+Directory                       : .
+File Modification Date/Time     : 2025:11:22 19:40:51+05:30
+File Access Date/Time           : 2026:01:03 13:58:58+05:30
+File Inode Change Date/Time     : 2026:01:03 13:58:55+05:30
+File Permissions                : -rw-rw-r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Resolution Unit                 : inches
+X Resolution                    : 72
+Y Resolution                    : 72
+Image Width                     : 896
+Image Height                    : 1152
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Megapixels                      : 1.0
+We can see that on using --common flag we are not getting File Size Tag which was there when we didn't use this flag.
+
+4. We can get more extended information with verbose mode by using the flag -v.This will show the comprehensive data 
+   about the process being performed.
+Example:
+exiftool -v img1.jpg
+//Shortened Output:-
+JPEG APP0 (14 bytes):
+  + [BinaryData directory, 9 bytes]
+  | JFIFVersion = 1 1
+  | ResolutionUnit = 1
+  | XResolution = 72
+  | YResolution = 72
+  | ThumbnailWidth = 0
+  | ThumbnailHeight = 0
+JPEG DQT (65 bytes):
+JPEG DQT (65 bytes):
+JPEG SOF0 (15 bytes):
+  ImageWidth = 896
+  ImageHeight = 1152
+  EncodingProcess = 0
+  BitsPerSample = 8
+  ColorComponents = 3
+  YCbCrSubSampling = 2 2
+JPEG DHT (26 bytes):
+JPEG DHT (85 bytes):
+JPEG DHT (25 bytes):
+JPEG DHT (57 bytes):
+JPEG SOS
+Here we got much more extended info about the file.
+
+How to write Meta data?
+1. We can use : exiftool  -<Exif Tag>= "New edited Meta Data"  <filename>
+   This will create a new exif tag
+Example:
+On running "exiftool -make="New edited Meta Data" img1.jpg" and then "exiftool img1.jpg" we get following output in which 
+a new exif tag Make appears.
+//Output
+We would see following new exif Tag created.
+
+Make                            : New edited Meta Data
+
+
+How to Remove meta data ?
+
+If we want to remove all the info in meta data of file we can use following command:
+exiftool -all=  <filename>
+Example:
+exiftool -all= img1.jpg
+Important thing to keep in mind while executing above command:-
+1. Metadata is removed by setting the tag to an empty value.
+2. There must be NO space between tag and =
+3. We can also remove specific tags just we have to replace -all in the command to -<Exif Tag>.Example:
+ exiftool -Make= img1.jpg
+
+Important Note:
+1. Some images may not contain EXIF metadata.
+2. Exiftool is used for following purposes in real world:-
+->Removing personal data (privacy)
+
+->Organizing photos by date
+
+->Digital forensics and file analysis
