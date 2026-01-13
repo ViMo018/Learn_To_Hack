@@ -1,0 +1,7 @@
+geek{grep_is_good_to_find_things_cEDf1591}
+
+command: grep (the "global regular expression print" utility)
+Its primary job is to search through text and print every line that matches a specific pattern or string.
+It allows to sift through thousands of lines of logs, source code, or configuration files to find passwords, hidden flags, or suspicious activity.
+
+link: https://drive.google.com/file/d/1TbP8l5f1UJCprMBC5MGwYQ1V_aor8OVm/view?usp=sharing
